@@ -15,7 +15,7 @@ class App extends Component {
       <div className="App">
           < Nav />
           <HogContainer allHogs={this.state.allHogs}/>
-          
+          {console.log(this.state.allHogs)}
       </div>
     )
   }

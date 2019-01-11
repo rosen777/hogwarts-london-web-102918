@@ -10,7 +10,7 @@ class HogContainer extends Component {
 
       <div className="container">
       {
-      // this.props.allHogs.map(h => <Hog allHogs={h} />)
+      this.props.allHogs.map(h => <Hog selectedHog={h} />)
       }
       </div>
     )
