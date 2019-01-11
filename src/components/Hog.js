@@ -3,11 +3,17 @@ import React, { Component } from 'react';
 class Hog extends Component {
 
   state = {
-      displayAdditionalInfo: false
+    medal: " ",
+    weight: " ",
+    specialty: " "
   }
-  renderAdditionalHogInfo =() =>{
-    console.log(this.props.selectedHog)
 
+  renderAdditionalHogInfo =() =>{
+      this.setState({
+        medal: this.props.selectedHog["highest medal achieved"],
+        weight: this.props.selectedHog["weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water"],
+        specialty: this.props.selectedHog.specialty
+      })
   }
 
   render() {
@@ -17,9 +23,10 @@ class Hog extends Component {
 
         <div className='hog-details pigTile maxPigTile' onClick={this.renderAdditionalHogInfo}>
           <h1>{this.props.selectedHog.name}</h1>
-          <h2>{this.props.selectedHog.specialty}</h2>
           <img src={this.props.selectedHog.img_url} />
-          <h4 className = "clickHog">{this.props.selectedHog["highest medal achieved"]}</h4>
+          <h4>{this.state.medal}</h4>
+          <h4>{this.state.weight}</h4>
+          <h4>{this.state.specialty}</h4>
         </div>
 
 
