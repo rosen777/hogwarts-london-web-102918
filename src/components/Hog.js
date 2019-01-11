@@ -23,7 +23,7 @@ class Hog extends Component {
 
         <div className='hog-details pigTile maxPigTile' onClick={this.renderAdditionalHogInfo}>
           <h1>{this.props.selectedHog.name}</h1>
-          <img src={this.props.selectedHog.img_url} />
+          <img src={process.env.PUBLIC_URL + '/hog-imgs/' + this.props.selectedHog.name.replace(' ', '_').toLowerCase() + '.jpg'} />
           <h4>{this.state.medal}</h4>
           <h4>{this.state.weight}</h4>
           <h4>{this.state.specialty}</h4>
