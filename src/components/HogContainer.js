@@ -50,8 +50,8 @@ class HogContainer extends Component {
 
     sortedHogs.sort(
       function(a, b) {
-        if(a.greased < b.greased) { return -1; }
-        if(a.greased > b.greased) { return 1; }
+        if(a.greased < b.greased) { return 1; }
+        if(a.greased > b.greased) { return -1; }
         return 0
       });
 
