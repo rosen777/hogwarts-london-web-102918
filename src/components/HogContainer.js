@@ -6,7 +6,7 @@ export default class HogContainer extends Component {
     return (
       <div className="container">
       {
-      this.props.allHogs.map(h => <Hog allHogs={h} />)
+      this.props.allHogs.map(h => <Hog selectedHog={h} />)
       }
       </div>
     )

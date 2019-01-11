@@ -4,10 +4,16 @@ export default class Hog extends Component {
   render() {
     return (
       <div className="hog">
-        // <Hog />
-        <p className='hog-details'>
-          {this.props.allHogs}
-        </p>
+      {
+
+        // <p className='hog-details'>
+        //   {this.props.selectedHog.name}
+        //   {this.props.selectedHog.specialty}
+        //   {this.props.selectedHog.greased}
+        // </p>
+
+
+}
       </div>
     )
   }
